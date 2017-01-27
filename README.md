@@ -18,17 +18,17 @@ irinamahmudjanova
 
 Wed Jan 18 15:51:32 2017
 
-library(dplyr)
-## 
-## Attaching package: 'dplyr'
-## The following objects are masked from 'package:stats':
-## 
-##     filter, lag
-## The following objects are masked from 'package:base':
-## 
-##     intersect, setdiff, setequal, union
-batting <- read.csv('Batting.csv')
-head(batting)
+   library(dplyr)
+    ## 
+    ## Attaching package: 'dplyr'
+    ## The following objects are masked from 'package:stats':
+    ## 
+    ##     filter, lag
+    ## The following objects are masked from 'package:base':
+    ## 
+    ##     intersect, setdiff, setequal, union
+   batting <- read.csv('Batting.csv')
+   head(batting)
 ##    playerID yearID stint teamID lgID  G G_batting AB R H X2B X3B HR RBI SB
 ## 1 aardsda01   2004     1    SFN   NL 11        11  0 0 0   0   0  0   0  0
 ## 2 aardsda01   2006     1    CHN   NL 45        43  2 0 0   0   0  0   0  0
