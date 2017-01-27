@@ -151,7 +151,7 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ##  UA  :  332   Max.   :165.00   Max.   :165.00   Max.   :716.0  
     ##  NA's:  737                    NA's   :1406     NA's   :6413   
     ##        R                H               X2B            X3B        
-##  Min.   :  0.00   Min.   :  0.00   Min.   : 0.0   Min.   : 0.000  
+    ##  Min.   :  0.00   Min.   :  0.00   Min.   : 0.0   Min.   : 0.000  
 ##  1st Qu.:  0.00   1st Qu.:  1.00   1st Qu.: 0.0   1st Qu.: 0.000  
 ##  Median :  5.00   Median : 12.00   Median : 2.0   Median : 0.000  
 ##  Mean   : 20.47   Mean   : 40.37   Mean   : 6.8   Mean   : 1.424  
