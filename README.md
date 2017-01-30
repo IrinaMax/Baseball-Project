@@ -156,47 +156,47 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ##  NA's:  737                    NA's   :1406     NA's   :6413   
     ##        R                H               X2B            X3B        
     ##  Min.   :  0.00   Min.   :  0.00   Min.   : 0.0   Min.   : 0.000  
-##  1st Qu.:  0.00   1st Qu.:  1.00   1st Qu.: 0.0   1st Qu.: 0.000  
-##  Median :  5.00   Median : 12.00   Median : 2.0   Median : 0.000  
-##  Mean   : 20.47   Mean   : 40.37   Mean   : 6.8   Mean   : 1.424  
-##  3rd Qu.: 31.00   3rd Qu.: 66.00   3rd Qu.:10.0   3rd Qu.: 2.000  
-##  Max.   :192.00   Max.   :262.00   Max.   :67.0   Max.   :36.000  
-##  NA's   :6413     NA's   :6413     NA's   :6413   NA's   :6413    
-##        HR              RBI               SB                CS        
-##  Min.   : 0.000   Min.   :  0.00   Min.   :  0.000   Min.   : 0.000  
-##  1st Qu.: 0.000   1st Qu.:  0.00   1st Qu.:  0.000   1st Qu.: 0.000  
-##  Median : 0.000   Median :  5.00   Median :  0.000   Median : 0.000  
-##  Mean   : 3.002   Mean   : 18.47   Mean   :  3.265   Mean   : 1.385  
-##  3rd Qu.: 3.000   3rd Qu.: 28.00   3rd Qu.:  2.000   3rd Qu.: 1.000  
-##  Max.   :73.000   Max.   :191.00   Max.   :138.000   Max.   :42.000  
-##  NA's   :6413     NA's   :6837     NA's   :7713      NA's   :29867   
-##        BB               SO              IBB              HBP        
-##  Min.   :  0.00   Min.   :  0.00   Min.   :  0.00   Min.   : 0.000  
-##  1st Qu.:  0.00   1st Qu.:  2.00   1st Qu.:  0.00   1st Qu.: 0.000  
-##  Median :  4.00   Median : 11.00   Median :  0.00   Median : 0.000  
-##  Mean   : 14.21   Mean   : 21.95   Mean   :  1.28   Mean   : 1.136  
-##  3rd Qu.: 21.00   3rd Qu.: 31.00   3rd Qu.:  1.00   3rd Qu.: 1.000  
-##  Max.   :232.00   Max.   :223.00   Max.   :120.00   Max.   :51.000  
-##  NA's   :6413     NA's   :14251    NA's   :42977    NA's   :9233    
-##        SH               SF             GIDP           G_old       
-##  Min.   : 0.000   Min.   : 0.0    Min.   : 0.00   Min.   :  0.00  
-##  1st Qu.: 0.000   1st Qu.: 0.0    1st Qu.: 0.00   1st Qu.: 11.00  
-##  Median : 1.000   Median : 0.0    Median : 1.00   Median : 34.00  
-##  Mean   : 2.564   Mean   : 1.2    Mean   : 3.33   Mean   : 50.99  
-##  3rd Qu.: 3.000   3rd Qu.: 2.0    3rd Qu.: 5.00   3rd Qu.: 82.00  
-##  Max.   :67.000   Max.   :19.0    Max.   :36.00   Max.   :165.00  
-##  NA's   :12751    NA's   :42446   NA's   :32521   NA's   :5189    
-##        BA             OBP             X1B              SLG       
-##  Min.   :0.000   Min.   :0.00    Min.   :  0.00   Min.   :0.000  
-##  1st Qu.:0.148   1st Qu.:0.19    1st Qu.:  1.00   1st Qu.:0.179  
-##  Median :0.231   Median :0.29    Median :  9.00   Median :0.309  
-##  Mean   :0.209   Mean   :0.26    Mean   : 29.14   Mean   :0.291  
-##  3rd Qu.:0.275   3rd Qu.:0.34    3rd Qu.: 48.00   3rd Qu.:0.397  
-##  Max.   :1.000   Max.   :1.00    Max.   :225.00   Max.   :4.000  
-##  NA's   :13520   NA's   :49115   NA's   :6413     NA's   :13520
-  batting <- subset(batting,yearID >= 1985)
+    ##  1st Qu.:  0.00   1st Qu.:  1.00   1st Qu.: 0.0   1st Qu.: 0.000  
+    ##  Median :  5.00   Median : 12.00   Median : 2.0   Median : 0.000  
+    ##  Mean   : 20.47   Mean   : 40.37   Mean   : 6.8   Mean   : 1.424  
+    ##  3rd Qu.: 31.00   3rd Qu.: 66.00   3rd Qu.:10.0   3rd Qu.: 2.000  
+    ##  Max.   :192.00   Max.   :262.00   Max.   :67.0   Max.   :36.000  
+    ##  NA's   :6413     NA's   :6413     NA's   :6413   NA's   :6413    
+    ##        HR              RBI               SB                CS        
+    ##  Min.   : 0.000   Min.   :  0.00   Min.   :  0.000   Min.   : 0.000  
+    ##  1st Qu.: 0.000   1st Qu.:  0.00   1st Qu.:  0.000   1st Qu.: 0.000  
+    ##  Median : 0.000   Median :  5.00   Median :  0.000   Median : 0.000  
+    ##  Mean   : 3.002   Mean   : 18.47   Mean   :  3.265   Mean   : 1.385  
+    ##  3rd Qu.: 3.000   3rd Qu.: 28.00   3rd Qu.:  2.000   3rd Qu.: 1.000  
+    ##  Max.   :73.000   Max.   :191.00   Max.   :138.000   Max.   :42.000  
+    ##  NA's   :6413     NA's   :6837     NA's   :7713      NA's   :29867   
+    ##        BB               SO              IBB              HBP        
+    ##  Min.   :  0.00   Min.   :  0.00   Min.   :  0.00   Min.   : 0.000  
+    ##  1st Qu.:  0.00   1st Qu.:  2.00   1st Qu.:  0.00   1st Qu.: 0.000  
+    ##  Median :  4.00   Median : 11.00   Median :  0.00   Median : 0.000  
+    ##  Mean   : 14.21   Mean   : 21.95   Mean   :  1.28   Mean   : 1.136  
+    ##  3rd Qu.: 21.00   3rd Qu.: 31.00   3rd Qu.:  1.00   3rd Qu.: 1.000  
+    ##  Max.   :232.00   Max.   :223.00   Max.   :120.00   Max.   :51.000  
+    ##  NA's   :6413     NA's   :14251    NA's   :42977    NA's   :9233    
+    ##        SH               SF             GIDP           G_old       
+    ##  Min.   : 0.000   Min.   : 0.0    Min.   : 0.00   Min.   :  0.00  
+    ##  1st Qu.: 0.000   1st Qu.: 0.0    1st Qu.: 0.00   1st Qu.: 11.00  
+    ##  Median : 1.000   Median : 0.0    Median : 1.00   Median : 34.00  
+    ##  Mean   : 2.564   Mean   : 1.2    Mean   : 3.33   Mean   : 50.99  
+    ##  3rd Qu.: 3.000   3rd Qu.: 2.0    3rd Qu.: 5.00   3rd Qu.: 82.00  
+    ##  Max.   :67.000   Max.   :19.0    Max.   :36.00   Max.   :165.00  
+    ##  NA's   :12751    NA's   :42446   NA's   :32521   NA's   :5189    
+    ##        BA             OBP             X1B              SLG       
+    ##  Min.   :0.000   Min.   :0.00    Min.   :  0.00   Min.   :0.000  
+    ##  1st Qu.:0.148   1st Qu.:0.19    1st Qu.:  1.00   1st Qu.:0.179  
+    ##  Median :0.231   Median :0.29    Median :  9.00   Median :0.309  
+    ##  Mean   :0.209   Mean   :0.26    Mean   : 29.14   Mean   :0.291  
+    ##  3rd Qu.:0.275   3rd Qu.:0.34    3rd Qu.: 48.00   3rd Qu.:0.397  
+    ##  Max.   :1.000   Max.   :1.00    Max.   :225.00   Max.   :4.000  
+    ##  NA's   :13520   NA's   :49115   NA's   :6413     NA's   :13520
+      batting <- subset(batting,yearID >= 1985)
   
-## Now use summary again to make sure the subset reassignment worked, your yearID min should be 1985
+#### Now use summary again to make sure the subset reassignment worked, your yearID min should be 1985
 summary(batting)
 ##       playerID         yearID         stint          teamID     
 ##  moyerja01:   27   Min.   :1985   Min.   :1.00   SDN    : 1313  
