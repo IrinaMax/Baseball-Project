@@ -374,13 +374,16 @@ ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
 
 
 ## Looks like there is no point in paying above 8 million or so (I'm just eyeballing this number). I'll choose that as a cutt off point. There are also a lot of players with OBP==0. Let's get rid of them too.
-avail.players <- filter(avail.players,salary<8000000,OBP>0)
+       avail.players <- filter(avail.players,salary<8000000,OBP>0)
+       
 ## The total AB of the lost players is 1469. This is about 1500, meaning I should probably cut off my avail.players at 1500/3= 500 AB.
 
-avail.players <- filter(avail.players,AB >= 500)
+      avail.players <- filter(avail.players,AB >= 500)
+      
 ## Now let's sort by OBP and see what we've got!
 
 possible <- head(arrange(avail.players,desc(OBP)),10)
+
 ## Grab columns I'm interested in:
 possible <- possible[,c('playerID','OBP','AB','salary')]
 possible
