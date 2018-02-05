@@ -368,8 +368,9 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     library(dplyr)
     avail.players <- filter(combo,yearID==2001)
 #### Then I made a quick plot to see where I should cut-off for salary in respect to OBP:
-library(ggplot2)
-ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
+   library(ggplot2)
+   ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
+   
 ## Warning: Removed 168 rows containing missing values (geom_point).
 
 
