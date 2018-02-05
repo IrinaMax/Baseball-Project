@@ -351,7 +351,8 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ## 5137  0.3378378 102 0.3855932      KCA     AL   240000
     ## 5138  0.3394625 120 0.4392523      KCA     AL   460000
     ## 5139  0.3789954 117 0.4768439      KCA     AL  2100000
-    ## 5
+    ## ....
+    
 #### Since all these players were lost in after 2001 in the offseason, let's only concern ourselves with the data from 2001.
 #### Use subset again to only grab the rows where the yearID was 2001.
     lost_players <- subset(lost_players,yearID == 2001)
@@ -364,16 +365,16 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ## 7878  giambja01 178  47   2 38 0.4769001 0.6596154 0.3423077 520
     ## 20114 saenzol01  67  21   1  9 0.2911765 0.3836066 0.2196721 305
     ## Note: There are lots of correct answers and ways to solve this!
-    ## First only grab available players from year 2001
+    
+## First only grab available players from year 2001
     library(dplyr)
     avail.players <- filter(combo,yearID==2001)
+    
 #### Then I made a quick plot to see where I should cut-off for salary in respect to OBP:
-   library(ggplot2)
-   ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
+    library(ggplot2)
+    ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
    
 ## Warning: Removed 168 rows containing missing values (geom_point).
-
-
 ## Looks like there is no point in paying above 8 million or so (I'm just eyeballing this number). I'll choose that as a cutt off point. There are also a lot of players with OBP==0. Let's get rid of them too.
        avail.players <- filter(avail.players,salary<8000000,OBP>0)
        
