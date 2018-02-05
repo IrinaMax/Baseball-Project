@@ -382,11 +382,11 @@ ggplot(avail.players,aes(x=OBP,y=salary)) + geom_point()
       
 ## Now let's sort by OBP and see what we've got!
 
-possible <- head(arrange(avail.players,desc(OBP)),10)
+      possible <- head(arrange(avail.players,desc(OBP)),10)
 
 ## Grab columns I'm interested in:
-possible <- possible[,c('playerID','OBP','AB','salary')]
-possible
+      possible <- possible[,c('playerID','OBP','AB','salary')]
+      possible
      ##     playerID       OBP  AB  salary
      ## 1  giambja01 0.4769001 520 4103333
      ## 2  heltoto01 0.4316547 587 4950000
@@ -398,6 +398,7 @@ possible
      ## 8  gilesbr02 0.4035608 576 7333333
      ## 9  pujolal01 0.4029630 590  200000
      ## 10 olerujo01 0.4011799 572 6700000
+     
 ## Can't choose giambja again, but the other ones look good (2-4). I choose them!
     possible[2:4,]
     ##    playerID       OBP  AB  salary
