@@ -254,8 +254,10 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ##  3rd Qu.:0.274   3rd Qu.:0.342   3rd Qu.: 42.00   3rd Qu.:0.423  
     ##  Max.   :1.000   Max.   :1.000   Max.   :225.00   Max.   :4.000  
     ##  NA's   :8905    NA's   :8821    NA's   :4377     NA's   :8905
+    
 #### Using the merge() function to merge the batting and sal data frames by c('playerID','yearID'). Call the new data frame combo
     combo <- merge(batting,sal,by=c('playerID','yearID'))
+    
 #### Using summary to check the data
     summary(combo)
     ##       playerID         yearID         stint          teamID.x    
@@ -292,45 +294,47 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
     ##  NA's   :2661     NA's   :2661     NA's   :2661      NA's   :2661   
     ##        BB               SO              IBB               HBP        
     ##  Min.   :  0.00   Min.   :  0.00   Min.   :  0.000   Min.   : 0.000  
-##  1st Qu.:  0.00   1st Qu.:  2.00   1st Qu.:  0.000   1st Qu.: 0.000  
-##  Median :  6.00   Median : 20.00   Median :  0.000   Median : 0.000  
-##  Mean   : 17.98   Mean   : 33.52   Mean   :  1.533   Mean   : 1.614  
-##  3rd Qu.: 29.00   3rd Qu.: 55.00   3rd Qu.:  2.000   3rd Qu.: 2.000  
-##  Max.   :232.00   Max.   :223.00   Max.   :120.000   Max.   :35.000  
-##  NA's   :2661     NA's   :2661     NA's   :2662      NA's   :2670    
-##        SH               SF              GIDP            G_old       
-##  Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   :  0.00  
-##  1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 20.00  
-##  Median : 0.000   Median : 0.000   Median : 2.000   Median : 47.00  
-##  Mean   : 1.786   Mean   : 1.554   Mean   : 4.127   Mean   : 61.43  
-##  3rd Qu.: 2.000   3rd Qu.: 2.000   3rd Qu.: 7.000   3rd Qu.:101.00  
-##  Max.   :39.000   Max.   :17.000   Max.   :35.000   Max.   :163.00  
-##  NA's   :2661     NA's   :2662     NA's   :2661     NA's   :3414    
-##        BA             OBP             X1B             SLG       
-##  Min.   :0.000   Min.   :0.000   Min.   :  0.0   Min.   :0.000  
-##  1st Qu.:0.160   1st Qu.:0.208   1st Qu.:  0.0   1st Qu.:0.200  
-##  Median :0.242   Median :0.305   Median : 13.0   Median :0.351  
-##  Mean   :0.212   Mean   :0.270   Mean   : 32.5   Mean   :0.317  
-##  3rd Qu.:0.276   3rd Qu.:0.346   3rd Qu.: 59.0   3rd Qu.:0.432  
-##  Max.   :1.000   Max.   :1.000   Max.   :225.0   Max.   :4.000  
-##  NA's   :5618    NA's   :5562    NA's   :2661    NA's   :5618   
-##     teamID.y     lgID.y         salary        
-##  CLE    :  935   AL:12304   Min.   :       0  
-##  PIT    :  932   NL:13093   1st Qu.:  255000  
-##  PHI    :  931              Median :  550000  
-##  SDN    :  923              Mean   : 1879256  
-##  LAN    :  921              3rd Qu.: 2150000  
-##  CIN    :  912              Max.   :33000000  
-##  (Other):19843
-#### Use the subset() function to get a data frame called lost_players from the combo data frame consisting of those 3 players. Hint: Try to figure out how to use %in% to avoid a bunch of or statements!
+    ##  1st Qu.:  0.00   1st Qu.:  2.00   1st Qu.:  0.000   1st Qu.: 0.000  
+    ##  Median :  6.00   Median : 20.00   Median :  0.000   Median : 0.000  
+    ##  Mean   : 17.98   Mean   : 33.52   Mean   :  1.533   Mean   : 1.614  
+    ##  3rd Qu.: 29.00   3rd Qu.: 55.00   3rd Qu.:  2.000   3rd Qu.: 2.000  
+    ##  Max.   :232.00   Max.   :223.00   Max.   :120.000   Max.   :35.000  
+    ##  NA's   :2661     NA's   :2661     NA's   :2662      NA's   :2670    
+    ##        SH               SF              GIDP            G_old       
+    ##  Min.   : 0.000   Min.   : 0.000   Min.   : 0.000   Min.   :  0.00  
+    ##  1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 0.000   1st Qu.: 20.00  
+    ##  Median : 0.000   Median : 0.000   Median : 2.000   Median : 47.00  
+    ##  Mean   : 1.786   Mean   : 1.554   Mean   : 4.127   Mean   : 61.43  
+    ##  3rd Qu.: 2.000   3rd Qu.: 2.000   3rd Qu.: 7.000   3rd Qu.:101.00  
+    ##  Max.   :39.000   Max.   :17.000   Max.   :35.000   Max.   :163.00  
+    ##  NA's   :2661     NA's   :2662     NA's   :2661     NA's   :3414    
+    ##        BA             OBP             X1B             SLG       
+    ##  Min.   :0.000   Min.   :0.000   Min.   :  0.0   Min.   :0.000  
+    ##  1st Qu.:0.160   1st Qu.:0.208   1st Qu.:  0.0   1st Qu.:0.200  
+    ##  Median :0.242   Median :0.305   Median : 13.0   Median :0.351  
+    ##  Mean   :0.212   Mean   :0.270   Mean   : 32.5   Mean   :0.317  
+    ##  3rd Qu.:0.276   3rd Qu.:0.346   3rd Qu.: 59.0   3rd Qu.:0.432  
+    ##  Max.   :1.000   Max.   :1.000   Max.   :225.0   Max.   :4.000  
+    ##  NA's   :5618    NA's   :5562    NA's   :2661    NA's   :5618   
+    ##     teamID.y     lgID.y         salary        
+    ##  CLE    :  935   AL:12304   Min.   :       0  
+    ##  PIT    :  932   NL:13093   1st Qu.:  255000  
+    ##  PHI    :  931              Median :  550000  
+    ##  SDN    :  923              Mean   : 1879256  
+    ##  LAN    :  921              3rd Qu.: 2150000  
+    ##  CIN    :  912              Max.   :33000000  
+    ##  (Other):19843
+    
+#### I will use subset() function to get a data frame called lost_players from the combo data frame consisting of those 3 players. And try to figure out how to use %in% to avoid a bunch of or statements!
     lost_players <- subset(combo,playerID %in% c('giambja01','damonjo01','saenzol01') )
     lost_players  
-##        playerID yearID stint teamID.x lgID.x   G G_batting  AB   R   H X2B
-## 5135  damonjo01   1995     1      KCA     AL  47        47 188  32  53  11
-## 5136  damonjo01   1996     1      KCA     AL 145       145 517  61 140  22
-## 5137  damonjo01   1997     1      KCA     AL 146       146 472  70 130  12
-## 5138  damonjo01   1998     1      KCA     AL 161       161 642 104 178  30
-## 5139  damonjo01   1999     1      KCA     AL 145       145 583 101 179  39
+    
+    ##        playerID yearID stint teamID.x lgID.x   G G_batting  AB   R   H X2B
+    ## 5135  damonjo01   1995     1      KCA     AL  47        47 188  32  53  11
+    ## 5136  damonjo01   1996     1      KCA     AL 145       145 517  61 140  22
+    ## 5137  damonjo01   1997     1      KCA     AL 146       146 472  70 130  12
+    ## 5138  damonjo01   1998     1      KCA     AL 161       161 642 104 178  30
+    ## 5139  damonjo01   1999     1      KCA     AL 145       145 583 101 179  39
 ## 5140  damonjo01   2000     1      KCA     AL 159       159 655 136 214  42
 ## 5141  damonjo01   2001     1      OAK     AL 155       155 644 108 165  34
 ## 5142  damonjo01   2002     1      BOS     AL 154       154 623 118 178  34
@@ -460,6 +464,7 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
 ## 20116 0.3247863  45 0.4796238      LAN     NL   650000
 ## 20117 0.3627451  27 0.5642458      LAN     NL  1000000
 ## 20118 0.2954545  12 0.3454545      LAN     NL  1000000
+
 #### Since all these players were lost in after 2001 in the offseason, let's only concern ourselves with the data from 2001.
 #### Use subset again to only grab the rows where the yearID was 2001.
     lost_players <- subset(lost_players,yearID == 2001)
@@ -467,12 +472,12 @@ Use subset() to reassign batting to only contain data from 1985 and onwards
 #### Reduce the lost_players data frame to the following columns: playerID,H,X2B,X3B,HR,OBP,SLG,BA,AB
     lost_players <- lost_players[,c('playerID','H','X2B','X3B','HR','OBP','SLG','BA','AB')]
      head(lost_players)
-##        playerID   H X2B X3B HR       OBP       SLG        BA  AB
-## 5141  damonjo01 165  34   4  9 0.3235294 0.3633540 0.2562112 644
-## 7878  giambja01 178  47   2 38 0.4769001 0.6596154 0.3423077 520
-## 20114 saenzol01  67  21   1  9 0.2911765 0.3836066 0.2196721 305
-## Note: There are lots of correct answers and ways to solve this!
-## First only grab available players from year 2001
+    ##        playerID   H X2B X3B HR       OBP       SLG        BA  AB
+    ## 5141  damonjo01 165  34   4  9 0.3235294 0.3633540 0.2562112 644
+    ## 7878  giambja01 178  47   2 38 0.4769001 0.6596154 0.3423077 520
+    ## 20114 saenzol01  67  21   1  9 0.2911765 0.3836066 0.2196721 305
+    ## Note: There are lots of correct answers and ways to solve this!
+    ## First only grab available players from year 2001
     library(dplyr)
     avail.players <- filter(combo,yearID==2001)
 #### Then I made a quick plot to see where I should cut-off for salary in respect to OBP:
